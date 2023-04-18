@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>cetus_site</title>
+</head>
+<!--
+    Nome:Guilherme Mathias de Araujo
+    Matrícula:1230111884
+    Nome:Everton Gonzales Barão
+    Matrícula:1230111904
+-->
+<body>
+    <div class="display">
+        <h1>Entre em contato:</h1>
+        <div class="formulario">
+            <form id="meu-formulario">
+                <label for="nome">Seu nome(Obrigatório)*</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+                <span class="error-message" id="nome-error-message"></span>
+                <label for="email">Seu e-mail(Obrigatório)*</label>
+                <input type="email" id="email" name="email" required>
+                <input type="submit" value="Enviar">
+            </form>
+            <script>
+const formulario = document.querySelector("#meu-formulario");
+const nomeInput = document.querySelector("#nome");
+const nomeError = document.querySelector("#nome-error-message");
+function validarNome(nome) {
+const regex = /^[a-zA-Z\s]*$/;
+return regex.test(nome);}
+function validarFormulario(event) {
+event.preventDefault();
+const nomeValue = nomeInput.value.trim();
+if (!validarNome(nomeValue)) {
+    nomeError.textContent = "O campo Nome deve conter somente letras.";
+    return false;
+} else {
+    nomeError.textContent = "";
+    return true;
+}}
+formulario.addEventListener("submit", validarFormulario);
+function enviarFormulario() {
+alert("Enviado com sucesso!");
+}
+formulario.addEventListener("submit", function(event) {
+event.preventDefault();
+if (validarFormulario(event)) {
+    enviarFormulario();
+}
+});
+            </script>
+        </div>
+            <ul class="lista">
+                <img src="./img/cetus_logo.png">
+                <li><a href="index.html"><button>Informações</button></a></li>
+                <li><a href="detalhes.html"><button>Detalhes</button></a></li>
+                <li><a href="produtos.html"><button>Portfólio</button></a></li>
+                <li><a href="novidades.html"><button>Novidades</button></a></li>
+                <li><a href="contato.html"><button>Contato</button></a></li>
+            </ul>
+            <h2 id="h2_contato"> Redes - sociais: </h2>
+            <ul class="lista_contato">
+                <li><a href="https://instagram.com/mda_guii?igshid=Mzc1MmZhNjY=">Instagram</a></li>
+                <li><a href="https://twitter.com/mda_guii">Twitter</a></li>
+                <li><a href="mailto:seuemail@example.com?subject=Assunto do Email&body=Olá, gostaria de entrar em contato para...">E-mail</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=55021988551608">WhatsApp</a></li>
+            </ul>
+    </div>
+</body>
+</html>

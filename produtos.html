@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>cetus_site</title>
+</head>
+<!--
+    Nome:Guilherme Mathias de Araujo
+    Matrícula:1230111884
+    Nome:Everton Gonzales Barão
+    Matrícula:1230111904
+-->
+<body>
+    <div class="display">
+        <h1 id="produtos">Nosso Portfólio:</h1>
+        <p></p>
+            <ul class="lista">
+                <img src="./img/cetus_logo.png">
+                <li><a href="index.html"><button>Informações</button></a></li>
+                <li><a href="detalhes.html"><button>Detalhes</button></a></li>
+                <li><a href="produtos.html"><button>Portfólio</button></a></li>
+                <li><a href="novidades.html"><button>Novidades</button></a></li>
+                <li><a href="contato.html"><button>Contato</button></a></li>
+            </ul>
+            <div class="image-grid">
+                <img src="/img/buteco_da_manca.png" id="imagens_produtos">
+                <img src="/img/logo_alphine.png" id="imagens_produtos">
+                <img src="/img/logo_fwz.png" id="imagens_produtos">
+                <img src="/img/logo_lcduarte.png" id="imagens_produtos">
+                <img src="/img/logo_precisa.png" id="imagens_produtos">
+                <img src="/img/modelo_mandala.png" id="imagens_produtos">
+                <img src="/img/modelo_ampulheta_abstrato_02.png" id="imagens_produtos">
+                <img src="/img/modelo_boladrado_abstrato.png" id="imagens_produtos">
+                <img src="/img/modelo_chapeu_malandro.png" id="imagens_produtos">
+                <img src="/img/modelo_coracao.png" id="imagens_produtos">
+                <img src="/img/aguia_estampa.png" id="imagens_produtos">
+                <img src="/img/modelo_triangulo_abstrato_sem_fundo.png" id="imagens_produtos">
+            </div>
+            <script>
+                const imageFolder = "images/";
+const imageCount = 12;
+for (let i = 1; i <= imageCount; i++) {
+const image = document.createElement("img");
+image.src = imageFolder + "image" + i + ".jpg";
+document.querySelector(".image-grid").appendChild(image);}
+            </script>
+    </div>
+</body>
+</html>
